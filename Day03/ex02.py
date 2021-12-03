@@ -1,4 +1,5 @@
 import numpy as np
+import sys
 
 def find(data, co2):
     pos = 0
@@ -16,8 +17,7 @@ def find(data, co2):
         
         pos += 1
 
-with open("input.txt") as f:
-    lines = [list(l.strip()) for l in f.readlines()]
+lines = [list(l.strip()) for l in sys.stdin.readlines()]
 
 data = np.array(lines) == '1'
 print(find(data, True) * find(data, False))

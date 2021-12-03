@@ -1,7 +1,7 @@
 import numpy as np
+import sys
 
-with open("input.txt") as f:
-    lines = [list(l.strip()) for l in f.readlines()]
+lines = [list(l.strip()) for l in sys.stdin.readlines()]
 
 data = np.array(lines) == '1'
 
